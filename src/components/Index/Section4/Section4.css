@@ -1,0 +1,97 @@
+.section4 {
+    width: 100%;
+}
+.section4-center {
+    position: relative;
+    width: 80rem;
+    height: 32rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+    background-image: url(../../../static/Index/Section4/Shared\ goals-cuate.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: left center;
+}
+
+.section4-texts {
+    position: absolute;
+    top: 13rem;
+    right: 5rem;
+}
+.section4-title {
+    font-family: 'harmonyos';
+    font-weight: 800;
+    color: #282828;
+    font-size: 4rem;
+}
+.section4-description {
+    font-family: 'harmonyos';
+    font-weight: 400;
+    color: #777;
+    font-size: 16px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05rem;
+}
+
+.section4-joinUs {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 48px;
+}
+.section4-joinUs-input {
+    box-sizing: border-box;
+    width: 270px;
+    border: 2px solid #282828;
+    border-radius: 24px;
+    padding-left: 1rem;
+    font-size: 16px;
+    line-height: 2rem;
+}
+.section4-joinUs-btn {
+    font-family: 'harmonyos';
+    cursor: pointer;
+    width: 120px;
+    border: none;
+    border-radius: 24px;
+    background-color: #f7c250;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 767px) {
+    .section4-center {
+        padding: 5rem 0;
+        width: 100%;
+        background-size: 100%;
+        background-position: center bottom;
+    }
+    .section4-texts {
+        top: 4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+    .section4-title {
+        text-align: center;
+        font-size: 42px;
+    }
+    .section4-description {
+        text-align: center;
+        font-size: 12px;
+    }
+    .section4-joinUs {
+        margin: 0 auto;
+        width: 80%;
+        height: 48px;
+    }
+    .section4-joinUs-input {
+        width: 65%;
+    }
+    .section4-joinUs-btn {
+        width: 30%;
+    }
+    
+}

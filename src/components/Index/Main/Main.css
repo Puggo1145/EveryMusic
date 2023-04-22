@@ -1,0 +1,113 @@
+.main-section {
+    width: 100%;
+}
+
+.main-center {
+    width: 80rem;
+    height: 45rem;
+    margin: 0 auto;
+    margin-top: 6rem;
+    background-image: url(../../../static/Index/Main/main-background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center 0.2rem;
+}
+
+.main-slogan {
+    font-family: 'SmileySans';
+    font-weight: 400;
+    color: #FFC043;
+    text-align: center;
+    font-size: 7rem;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.main-description {
+    font-family: 'harmonyos';
+    font-weight: 400;
+    color: #777777;
+    text-align: center;
+    font-size: 18px;
+    margin: 1.25rem auto;
+}
+
+.main-start-link {
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto;
+    width: 15rem;
+    height: 5rem;
+    border: none;
+    border-radius: 2.5rem;
+    background-color: #FFC043;
+    box-shadow: 0 0 15px -3px #FFC043;
+    text-align: center;
+    line-height: 5rem;
+    font-size: 1.75rem;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    color: #fff
+}
+
+.main-infoTab {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80rem;
+    height: 160px;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    background: linear-gradient(to right, #ecedf9, #fbfbfd);
+}
+
+.main-infoTab li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+.main-infoTab h3 {
+    font-family: 'harmonyos';
+    font-size: 36px;
+}
+.main-infoTab p {
+    font-family: 'harmonyos';
+    font-size: 1rem;
+    color: #777777;
+}
+
+@media screen and (max-width: 767px) {
+    .main-center {
+        width: 100%;
+        background-image: url(../../../static/Index/Main/Music-cuate\ 1.png);
+        background-size: contain;
+        background-position: center 110%;
+    }
+    .main-slogan {
+        font-size: 48px;
+    }
+    .main-description {
+        font-size: 12px;
+    }
+    .main-infoTab {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 1136px) {
+
+}
+
+@media screen and (min-width: 1280px) {
+
+}

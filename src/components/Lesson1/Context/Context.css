@@ -1,0 +1,63 @@
+.context-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    position: fixed; /* 修改为 fixed */
+    bottom: 0;
+    left: 50%; /* 添加此行以使其水平居中 */
+    transform: translateX(-50%); /* 添加此行以使其水平居中 */
+    max-width: 1280px;
+    width: 95%;
+    height: 160px;
+    border: 2px solid #ccc;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #f3f3f3;
+}
+  
+
+.context-tingTing {
+    width: 180px;
+    margin-top: -100px;
+    margin-left: 20px;
+}
+
+.context-words {
+    flex: 1;
+    width: 850px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.context-ok {
+    cursor: pointer;
+    width: 120px;
+    height: 60px;
+    font-size: 24px;
+    color: #2a2a2a;
+    font-weight: 800;
+    border: #ccc 2px solid;
+    border-bottom: #ccc 5px solid;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 0 20px;
+    transition: all 0.3s ease;
+}
+.context-ok:hover {
+    background-color: #dddddd;
+}
+
+@media (max-width: 700px) {
+    .context-center {
+        bottom: 0;
+    }
+    .context-tingTing {
+      display: none;
+    }
+    .context-words {
+        flex: 1;
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+    }
+}

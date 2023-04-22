@@ -1,0 +1,81 @@
+footer {
+    display: flex;
+    align-items: center;
+    width: 98%;
+    height: 120px;
+    border-top: 1px solid #ccc;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer-texts h2 {
+    color: #a7a7a7;
+    font-size: 24px;
+    font-weight: 800;
+    padding-left: 40px;
+}
+.footer-page-routeBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    height: 56px;
+    padding-right: 40px;
+}
+.footer-pageBtn {
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 56px;
+    height: 100%;
+    background-color: #f7cd55;
+    background-image: url(../../../static/Lesson1/footer/prevPage.png);
+    border-radius: 50%;
+    border: 2px solid #fabc1e;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 60% center;
+    transition: all 0.3s ease;
+}
+.footer-pageBtn:hover {
+    background-color: #f3b919;
+    border: 2px solid #fabc1e;
+}
+
+.prev {
+    transform: rotate(-180deg);
+}
+
+.home {
+    background-image: url(../../../static/Lesson1/footer/home.png);
+    background-position: center;
+}
+
+.promptNextPage {
+    background-color: #34d972;
+    border: 2px solid #07b148;
+    animation: promptNextPage 0.7s ease-in-out;
+}
+
+@keyframes promptNextPage {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    40%,
+    60% {
+        transform: scale(0.8);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .footer-texts h2 {
+        font-size: 18px;
+    }
+
+}

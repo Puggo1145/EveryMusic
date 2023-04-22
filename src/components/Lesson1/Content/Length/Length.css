@@ -1,0 +1,79 @@
+.length-center {
+    flex: 1;
+    position: relative;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.length-trainSection {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 85%;
+    background-image: url(../../../../static/Lesson1/length/rail.png);
+    background-repeat: repeat-x;
+    background-size: 50%;
+    background-position: bottom;
+}
+.length-train {
+    position: absolute;
+    left: 0;
+    bottom: 0.7rem;
+    width: 15rem;
+}
+
+/* distanceBar */
+.length-distanceBar {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2rem;
+}
+.length-distanceBar .length-bar {
+    width: 0rem;
+    height: 100%;
+    background-color: rgb(255, 171, 60);
+}
+.length-distanceNum {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: rgb(255, 204, 138);
+    margin-left: 1rem;
+}
+
+
+@media (max-width: 1280px) {
+    .length-train {
+        width: 14rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .length-train {
+        width: 12rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .length-train {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 610px) {
+    .length-train {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .length-train {
+        width: 8rem;
+        bottom: 0.1rem;
+    }
+}

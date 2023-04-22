@@ -1,0 +1,75 @@
+.section2 {
+    width: 100%;
+}
+
+.section2-center {
+    position: relative;
+    width: 80rem;
+    height: 40rem;
+    margin: 0 auto;
+    background-image: url(../../../static/Index/Section2/click.png);
+    background-repeat: no-repeat;
+    background-size: 30rem;
+    background-position: right 10rem;
+}
+
+.section2-texts {
+    position: absolute;
+    top: 8rem;
+    left: 5rem;
+    width: 100%;
+}
+.section2-title {
+    font-family: 'harmonyos';
+    font-weight: 800;
+    color: #282828;
+    font-size: 4rem;
+}
+.section2-description {
+    font-family: 'harmonyos';
+    font-weight: 400;
+    color: #777;
+    font-size: 16px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.section2-knowMore {
+    display: block;
+    width: 12rem;
+    height: 4rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+    background-color: #FFC043;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff
+}
+
+@media screen and (max-width: 767px) {
+    .section2-center {
+        width: 100%;
+        background-size: 20rem;
+        background-position: center bottom;
+    }
+    .section2-texts {
+        position: absolute;
+        top: 4rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .section2-title {
+        text-align: center;
+        font-size: 48px;
+    }
+    .section2-description {
+        text-align: center;
+        font-size: 12px;
+    }
+    .section2-knowMore {
+        margin: 0 auto;
+    }
+}

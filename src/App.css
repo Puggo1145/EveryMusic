@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* 禁止移动端左右拖动 */
+html{
+    touch-action:none;
+    touch-action:pan-y;    
+}
+
+@font-face {
+    font-family: 'SmileySans';
+    src: url('../public/fonts/SmileySans-Oblique.ttf');
+}
+@font-face {
+    font-family: 'harmonyos';
+    src: url('../public/fonts/HarmonyOS-Sans-Black.ttf');
+}
+
+
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1136px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    html {
+        font-size: 16px;
+    }
+}
