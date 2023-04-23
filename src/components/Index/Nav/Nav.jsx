@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import './Nav.css'
 
@@ -43,7 +44,7 @@ export default class Nav extends Component {
                 <li className='nav-link-course'><a className='nav-link-aLink' href="#">课程</a></li>
                 <li className='nav-link-aboutUs'><a className='nav-link-aLink' href="#">关于我们</a></li>
                 <li>|</li>
-                <li className='nav-signup'><a className='nav-signup-aLink' href="#">注册</a></li>
+                <li className='nav-signup'><Link className='nav-signup-aLink' to="/login">注册</Link></li>
             </ul>
             <button onClick={this.handleMobileClick} className='mobileLink'></button>
         </div>

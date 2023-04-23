@@ -1,0 +1,44 @@
+.Introduction {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 700px;
+}
+
+.introduction-content {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #ffc043;
+    padding: 60px;
+    background-image: url(../../../static/Login/Introduction/content-img.png);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 70% 95%;
+}
+
+.introduction-Logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 180px;
+    margin-bottom: 60px;
+}
+.introduction-Logo img {
+    width: 48px;
+}
+.introduction-Logo p {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+}
+
+.introduction-slogan {
+    font-family: 'smiley sans';
+    font-size: 86px;
+    color: #fff;
+    font-weight: 400;
+}

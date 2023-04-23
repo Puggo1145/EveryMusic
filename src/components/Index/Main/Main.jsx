@@ -17,7 +17,7 @@ export default class Main extends Component {
             <br />[当前版本为测试版，仅开放一节课程，更多内容敬请期待]
         </p>
         {/* <button className='main-start-link' onClick={this.toLesson}>立即体验</button> */}
-        <Link className='main-start-link' to="/lesson1/video">立即体验</Link>
+        <Link className='main-start-link' to="/learn">立即体验</Link>
       </div>
       <ul className='main-infoTab'>
         <li>

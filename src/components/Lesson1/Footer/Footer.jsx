@@ -34,27 +34,27 @@ class Footer extends Component {
   }
 
   goPrevPage = () => {
-      const currentIndex = routesOrder.indexOf(this.props.location.pathname);
-    
-      if (currentIndex > 0) {
-        this.props.history.push(routesOrder[currentIndex - 1]);
-        PubSub.publish("PAGE_CHANGED", { pageIndex: currentIndex - 1, routesOrder });
-      }
+    const currentIndex = routesOrder.indexOf(this.props.location.pathname);
+
+    if (currentIndex > 0) {
+      this.props.history.push(routesOrder[currentIndex - 1]);
+      PubSub.publish("PAGE_CHANGED", { pageIndex: currentIndex - 1, routesOrder });
+    }
   };
 
   goNextPage = () => {
-      const currentIndex = routesOrder.indexOf(this.props.location.pathname);
-    
-      if (currentIndex < routesOrder.length - 1) {
-        this.props.history.push(routesOrder[currentIndex + 1]);
-        PubSub.publish("PAGE_CHANGED", { pageIndex: currentIndex + 1, routesOrder });
-      } else {
-        window.location.href = "/"; // 回到首页
-      }
-      if (this.state.promptNextPage) {
-        this.setState({ promptNextPage: false });
-      }
-  };
+    const currentIndex = routesOrder.indexOf(this.props.location.pathname);
+
+    if (currentIndex < routesOrder.length - 1) {
+      this.props.history.push(routesOrder[currentIndex + 1]);
+      PubSub.publish("PAGE_CHANGED", { pageIndex: currentIndex + 1, routesOrder });
+    } else {
+      window.location.href = "/learn"; // 回到课程选择页面
+    }
+    if (this.state.promptNextPage) {
+      this.setState({ promptNextPage: false });
+    }
+  }
 
   render() {
     const currentIndex = routesOrder.indexOf(this.props.location.pathname);

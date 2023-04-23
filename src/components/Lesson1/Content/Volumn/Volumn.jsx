@@ -43,8 +43,6 @@ export default class Volumn extends Component {
   }
 
   onSuccess = (stream) => {
-    console.log('function processed');
-
     //创建一个音频环境对像
     const audioContext = window.AudioContext || window.webkitAudioContext;
     this.audioContext = new audioContext();

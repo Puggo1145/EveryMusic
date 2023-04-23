@@ -48,8 +48,8 @@ export default class Timbre extends Component {
     currentlyPlaying: null,
   };
 
-
-  async componentDidMount() {
+  // 组件挂载后的全局操作：1.加载音频文件 2.订阅全局事件，context隐藏时，允许用户操作
+  async componentDidMount() {    
     const instruments = { ...this.state.instruments };
     for (const instrument in instruments) {
       if (instruments.hasOwnProperty(instrument)) {
@@ -64,58 +64,72 @@ export default class Timbre extends Component {
     });
   }
 
-  handleClick = (instrument) => {
-    const instruments = { ...this.state.instruments };
+  componentWillUnmount() {
+    this.handleStopAudio() // 停止正在播放的音频，进入下一页
+  }
 
-    if (this.state.currentlyPlaying === instrument) {
-      instruments[instrument].source.stop();
-      instruments[instrument].source = null;
-      instruments[instrument].progress = 0;
+  handleStopAudio = () => {
+    if (this.state.currentlyPlaying) {
+      const instruments = { ...this.state.instruments };
+      instruments[this.state.currentlyPlaying].source.stop();
+      instruments[this.state.currentlyPlaying].source = null;
+      instruments[this.state.currentlyPlaying].progress = 0;
       this.setState({ instruments, currentlyPlaying: null });
-    } else {
-      if (this.state.currentlyPlaying) {
-        instruments[this.state.currentlyPlaying].source.stop();
-        instruments[this.state.currentlyPlaying].source = null;
-        instruments[this.state.currentlyPlaying].progress = 0;
-      }
+    }
+  }
 
-      const source = audioContext.createBufferSource();
-      source.buffer = instruments[instrument].buffer;
-      source.connect(audioContext.destination);
-      source.start();
+  handleClick = (instrument) => {
+    if (this.state.interactionEnabled) { // 允许用户操作
+      const instruments = { ...this.state.instruments };
 
-      instruments[instrument].startTime = audioContext.currentTime;
-
-      source.onended = () => {
+      if (this.state.currentlyPlaying === instrument) {
+        instruments[instrument].source.stop();
         instruments[instrument].source = null;
         instruments[instrument].progress = 0;
-        this.setState((prevState) => {
-          if (prevState.currentlyPlaying === instrument) {
-            return { instruments, currentlyPlaying: null };
-          } else {
-            return null;
-          }
-        });
-      };
-
-      instruments[instrument].source = source;
-      this.setState({ instruments, currentlyPlaying: instrument });
-
-      const updateProgress = () => {
-        if (this.state.currentlyPlaying === instrument && instruments[instrument].buffer) {
-          const progress = (audioContext.currentTime - instruments[instrument].startTime) / instruments[instrument].buffer.duration;
-          instruments[instrument].progress = progress;
-          this.setState({ instruments });
-
-          requestAnimationFrame(updateProgress);
+        this.setState({ instruments, currentlyPlaying: null });
+      } else {
+        if (this.state.currentlyPlaying) {
+          instruments[this.state.currentlyPlaying].source.stop();
+          instruments[this.state.currentlyPlaying].source = null;
+          instruments[this.state.currentlyPlaying].progress = 0;
         }
-      };
 
-      requestAnimationFrame(updateProgress);
+        const source = audioContext.createBufferSource();
+        source.buffer = instruments[instrument].buffer;
+        source.connect(audioContext.destination);
+        source.start();
+
+        instruments[instrument].startTime = audioContext.currentTime;
+
+        source.onended = () => {
+          instruments[instrument].source = null;
+          instruments[instrument].progress = 0;
+          this.setState((prevState) => {
+            if (prevState.currentlyPlaying === instrument) {
+              return { instruments, currentlyPlaying: null };
+            } else {
+              return null;
+            }
+          });
+        };
+
+        instruments[instrument].source = source;
+        this.setState({ instruments, currentlyPlaying: instrument });
+
+        const updateProgress = () => {
+          if (this.state.currentlyPlaying === instrument && instruments[instrument].buffer) {
+            const progress = (audioContext.currentTime - instruments[instrument].startTime) / instruments[instrument].buffer.duration;
+            instruments[instrument].progress = progress;
+            this.setState({ instruments });
+
+            requestAnimationFrame(updateProgress);
+          }
+        };
+
+        requestAnimationFrame(updateProgress);
+      }
     }
   };
-
-
 
   render() {
     const { instruments } = this.state;

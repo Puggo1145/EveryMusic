@@ -105,7 +105,7 @@ export default class PitchGame extends Component {
     const noteIndex = Math.round((Math.log2(frequency / A4) * 12 + 57) % 12);
     const notesMapping = [0, null, 1, null, 2, 3, null, 4, null, 5, null, 6];
 
-    console.log(noteIndex, clarityIndex, this.state.noteNames[noteIndex % this.state.noteNames.length]);
+    // console.log(noteIndex, clarityIndex, this.state.noteNames[noteIndex % this.state.noteNames.length]); 音准调试
   
     if (clarityIndex >= 90) {
       const targetNoteIndex = notesMapping[noteIndex % this.state.noteNames.length];

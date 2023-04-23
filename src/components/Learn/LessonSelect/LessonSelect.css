@@ -1,0 +1,123 @@
+.lessonSelect {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.lessonSelect-content {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1280px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.lessonSelect-chapter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 680px;
+    height: 450px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.lessonSelect-chapter-description {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+}
+
+.description-chapter1 {
+    background-color: #ffc043;
+}
+
+.description-chapter2 {
+    background-color: #58cc02;
+}
+
+.lessonSelect-chapter1-lessonNum {
+    font-size: 24px;
+}
+
+.lessonSelect-chapter1-lessons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+.lessonSelect-lessons {
+    width: 86px;
+    height: 86px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 86px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+
+.lesson-default {
+    border-bottom: 8px solid #ccc;
+    background-color: #e5e5e5;
+}
+
+.lessonSelect-chapter1-lesson1 {
+    cursor: pointer;
+    border-bottom: 8px solid #e49800;
+    background-color: #ffc043;
+    transition: all 0.3s ease-in-out;
+}
+.lessonSelect-chapter1-lesson1:hover {
+    transform: scale(1.1);
+}
+
+.lessonSelect-chapter1-lesson1::after {
+    content: "点击开始学习";
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 50px;
+    color: #ffb41f;
+    display: block;
+    width: 140px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: -28px;
+}
+
+.lessonSelect-chapter1-lesson2 {
+    margin-top: 80px;
+}
+
+/* chapter2-lessons */
+.lessonSelect-chapter2-lesson2 {
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1260px) {
+    .lessonSelect-content {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+    }
+    
+}
