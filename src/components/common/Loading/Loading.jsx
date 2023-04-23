@@ -83,7 +83,6 @@ export default class Loading extends Component {
   };
   
   // 音频加载器
-  
   async loadAudioFile(src) {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioContext = new AudioContext();
@@ -92,7 +91,6 @@ export default class Loading extends Component {
     const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
     return audioBuffer;
   }
-
 
   render() {
     return (
