@@ -15,13 +15,13 @@ export default class Section3 extends Component {
                 </p>
             </div>
             <ul className='section3-showCase'>
-                <li className='section3-showCase-item note'>
+                <li className='section3-showCase-item s3-note'>
                     <p>音的高低</p>
                 </li>
-                <li className='section3-showCase-item volume'>
+                <li className='section3-showCase-item s3-volume'>
                     <p>音的强弱</p>
                 </li>
-                <li className='section3-showCase-item length'>
+                <li className='section3-showCase-item s3-length'>
                     <p>音的长短</p>
                 </li>
             </ul>

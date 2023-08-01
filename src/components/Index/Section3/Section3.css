@@ -86,15 +86,15 @@
     line-height: 4rem;
     padding-right: 1rem;
 }
-.note p {
+.s3-note p {
     background-color: #6e9cff;
     color: #fff;
 }
-.volume p {
+.s3-volume p {
     background-color: #ffce6b;
     color: #fff;
 }
-.length p {
+.s3-length p {
     background-color: #ff9486;
     color: #fff;
 }

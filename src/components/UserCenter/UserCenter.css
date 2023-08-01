@@ -1,0 +1,232 @@
+.uc {
+    padding-top: 148px;
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+}
+.uc h1 {
+    color: #333;
+}
+
+.uc-top {
+    width: 100%;
+    height: 156px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 24px;
+    margin-bottom: 36px;
+}
+.uc-userInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.uc-head {
+    width: 128px;
+    height: 128px;
+    border-radius: 64px;
+    background-color: #58a700;
+    text-align: center;
+    line-height: 128px;
+    font-size: 56px;
+    font-weight: 800;
+    color: #fff;
+    margin-right: 24px;
+}
+.uc-classSwitch {
+    overflow: hidden;
+    cursor: pointer;
+    width: 160px;
+    border-radius: 16px;
+    border: 2px solid #e5e5e5;
+    margin-top: 36px;
+    background-color: #fff;
+}
+.uc-classSwitch-item {
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    color: #333;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+.uc-classSwitch-item:hover {
+    background-color: #e5e5e5;
+}
+
+.uc-greet-texts h1 {
+    font-size: 32px;
+}
+.uc-greet-texts p {
+    font-size: 16px;
+    font-weight: 800;
+    color: #333;
+}
+
+.uc-school {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #858585;
+    margin-top: 24px;
+}
+.uc-school img {
+    width: 20px;
+    margin-right: 4px;
+}
+
+
+.uc-addUp h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+.uc-addUp-content {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    margin-bottom: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+}
+.uc-addUp-content-item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 2px solid #e5e5e5;
+    padding: 24px;
+    padding-left: 84px;
+    background-repeat: no-repeat;
+    background-position: 24px center;
+}
+.uc-addUp-content-item p {
+    font-size: 16px;
+    color: #afafaf;
+}
+.uc-addUp-content-item h5 {
+    font-size: 24px;
+}
+.uc-addUp-content-item:nth-child(1) {
+    background-size: 42px;
+    background-image: url(../../static/UserCenter/time.png);
+}
+.uc-addUp-content-item:nth-child(2) {
+    background-size: 32px;
+    background-image: url(../../static/UserCenter/lessons.png);
+}
+
+
+.uc-main h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+.uc-main-content {
+    width: 100%;
+    height: 400px;
+    display: grid;
+    grid-template-areas: 
+        "sing learn"
+        "lesson learn";
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 24px;
+    margin-bottom: 64px;
+}
+.uc-main-content a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    padding: 24px;
+}
+
+.uc-main-content li {
+    position: relative;
+    border-radius: 16px;
+    transition: all .3s ease;
+}
+.uc-main-content li:hover {
+    transform: scale(1.01);
+}
+
+.uc-singProcess {
+    grid-area: sing;
+    background-color: #496ce7;
+    border-bottom: 8px solid #3a55c4;
+}
+
+.uc-lessonProcess {
+    grid-area: lesson;
+    background-color: #ffc043;
+    border-bottom: 8px solid #e6a00f;
+}
+
+.uc-musicLearn {
+    grid-area: learn;
+    background-color: #7ac70c;
+    border-bottom: 8px solid #5e9a0a;
+}
+
+.uc-progress-info {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 30px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+}
+.uc-progressBar {
+    overflow: hidden;
+    width: 80%;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+.uc-progressBar-progress {
+    height: 14px;
+    border-radius: 7px;
+    background-color: #3a55c4;
+}
+
+.uc-musicLearn-resource {
+    width: 80%;
+    position: absolute;
+    top: 96px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.uc-musicLearn-resource .uc-musicLearn-resource-item {
+    width: 100%;
+    height: 100px;
+    border-radius: 8px;
+    background-color: #6bb00b;
+    margin-bottom: 12px;
+    text-align: center;
+    line-height: 50px;
+    transition: all .3s ease;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: right 16px;
+}
+.uc-musicLearn-resource-item:nth-child(1) {
+    background-image: url(../../static/UserCenter/document.png);
+}
+.uc-musicLearn-resource-item:nth-child(2) {
+    background-image: url(../../static/UserCenter/textbook.png);
+}
+.uc-musicLearn-resource-item:hover {
+    background-color: #5e9a0a;
+}

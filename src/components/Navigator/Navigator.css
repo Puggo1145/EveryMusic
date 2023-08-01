@@ -1,0 +1,115 @@
+.ng {
+    width: 100vw;
+    height: 100vh;
+    background: #F2F1F8;
+    padding-top: 148px;
+}
+
+.ng-description {
+    text-align: center;
+    margin-top: 24px;
+    color: #263238;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+.ng-content {
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+.ng-content-item {
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    max-width: 400px;
+    width: 80%;
+    height: 500px;
+    border-radius: 32px;
+    padding: 48px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.ng-content-item:hover {
+    transform: scale(1.01);
+}
+.ng-content-item:nth-child(1) {
+    background: #496CE7;
+    box-shadow: 0px 0px 10px -2px #496CE7;
+}
+.ng-content-item:nth-child(1):hover {
+    box-shadow: 0px 0px 18px -2px #496CE7;
+}
+.ng-content-item:nth-child(2) {
+    background: #FFC043;
+    box-shadow: 0px 0px 10px -2px #FFC043;
+}
+.ng-content-item:nth-child(2):hover {
+    box-shadow: 0px 0px 20px -2px #FFC043;
+}
+.ng-content-item:nth-child(3) {
+    background: #7ac70c;
+    box-shadow: 0px 0px 10px -2px #7ac70c;
+}
+.ng-content-item:nth-child(3):hover {
+    box-shadow: 0px 0px 20px -2px #7ac70c;
+}
+
+
+.ng-content-item-title {
+    color: #FFF;
+    font-size: 42px;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+.ng-content-item-description {
+    color: #fff;
+}
+
+.ng-content-item-levelmark {
+    width: 114px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 64px;
+    background: #FFF;
+    text-align: center;
+    line-height: 33px;
+    margin-top: 24px;
+}
+
+.ng-content-item-img {
+    position: absolute;
+    bottom: -64px;
+    right: 36px;
+    width: 320px;
+}
+
+@media screen and (max-width: 768px) {
+    .ng-content {
+        justify-content: center;
+    }
+    .ng-content-item {
+        height: 500px;
+        margin-bottom: 64px;
+    }
+}
+.ng-content .ng-content-item-notlogin{
+    cursor: no-drop;
+    background-color: #e9eaee;
+	box-shadow: 0px 0px 0;
+	color:#333333;
+}
+
+
+.ng-content .ng-content-item-notlogin:hover {
+    box-shadow: 0px 0px 0;
+	transform: scale(1);
+}

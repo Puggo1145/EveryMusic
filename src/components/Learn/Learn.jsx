@@ -1,17 +1,15 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-import Header from './Header/Header'
+import Header from '../common/Header/Header'
 import LessonSelect from './LessonSelect/LessonSelect'
 
 import './Learn.css'
 
-export default class Learn extends Component {
-  render() {
+export default function Learn(props) {
     return (
         <div className='Learn'>
-          <Header />
+          <Header title={"课程选择"}/>
           <LessonSelect />
         </div>
     )
-  }
 }

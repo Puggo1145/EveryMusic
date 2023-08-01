@@ -13,11 +13,10 @@ export default class Main extends Component {
             在互动中学习音乐
         </h1>
         <p className='main-description'>
-            最棒的在线音乐“互动课程”，用游戏的方式学习音乐、享受音乐
-            <br />[当前版本为测试版，仅开放一节课程，更多内容敬请期待]
+            最棒的在线音乐“互动课程”，用游戏的方式学习音乐
+            <br />[全新的唱歌系统已上线 (当前版本为测试版)]
         </p>
-        {/* <button className='main-start-link' onClick={this.toLesson}>立即体验</button> */}
-        <Link className='main-start-link' to="/learn">立即体验</Link>
+        <Link className='main-start-link' to="/navigator">立即体验</Link>
       </div>
       <ul className='main-infoTab'>
         <li>

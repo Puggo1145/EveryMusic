@@ -79,7 +79,7 @@
 
 /* 按钮放大和缩小 */
 .timbre-playing {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .timbre-piano,
 .timbre-guitar,
@@ -121,8 +121,8 @@
     }
     .timbre-timbreSection div {
         align-items: center;
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         border-radius: 5rem;
     }
     .timbre-timbreSection {

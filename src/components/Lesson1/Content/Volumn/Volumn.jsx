@@ -23,11 +23,60 @@ export default class Volumn extends Component {
   componentDidUpdate() {
     if ( this.state.interactionEnabled ) {
       // 捕获音频媒体
-      navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
-      if (!navigator.getUserMedia) {
+      navigator.mediaDevices.getUserMedia = 
+   navigator.mediaDevices.getUserMedia || 
+   navigator.mediaDevices.webkitGetUserMedia || 
+   navigator.mediaDevices.mozGetUserMedia || 
+   navigator.mediaDevices.msGetUserMedia;
+      if (!navigator.mediaDevices.getUserMedia) {
         console.log('您的浏览器不支持使用麦克风。');
       }
-      navigator.getUserMedia({ audio: true }, this.onSuccess, () => console.log('获取音频时出现了一些问题'));
+      navigator.mediaDevices.getUserMedia({ audio: true })
+   .then((stream)=>{
+    const audioContext = window.AudioContext || window.webkitAudioContext;
+    this.audioContext = new audioContext();
+    
+    const audioInput = this.audioContext.createMediaStreamSource(stream);
+    this.audioInput = audioInput;
+    
+    const volume = this.audioContext.createGain();
+    this.volume = volume;
+    audioInput.connect(volume);
+    
+    //创建缓存，用来缓存声音
+    let bufferSize = 2048;
+    
+    // 创建声音的缓存节点，createJavaScriptNode方法的
+    // 第二个和第三个参数指的是输入和输出都是双声道。
+    let recorder = this.audioContext.createScriptProcessor(bufferSize, 1, 1);
+    this.recorder = recorder;
+    
+    // 录音过程的回调函数，基本上是将左右两声道的声音
+    // 分别放入缓存。
+    recorder.onaudioprocess = (e) => {
+      let buffer = e.inputBuffer.getChannelData(0); //获得缓冲区的输入音频，转换为包含了PCM通道数据的32位浮点数组
+    
+      //创建变量并迭代来获取最大的音量值
+      let maxVal = 0;
+      for (let i = 0; i < buffer.length; i++) {
+        if (maxVal < buffer[i]) {
+          maxVal = buffer[i];
+        }
+      }
+    
+      //scale用于调整maxVal的精度，乘数用于控制头部的放大比例
+      const scale = 1 + maxVal * 2;
+      const img = this.headRef.current;
+      img.style.transform = "scale(" + scale + ")";
+    };
+    
+    // 将音量节点连上缓存节点，换言之，音量节点是输入
+    // 和输出的中间环节。
+    volume.connect(recorder);
+    recorder.connect(this.audioContext.destination);
+   }).catch(function(err){
+    console.log(err);
+   })
     }
   }
 
@@ -42,57 +91,13 @@ export default class Volumn extends Component {
     }
   }
 
-  onSuccess = (stream) => {
-    //创建一个音频环境对像
-    const audioContext = window.AudioContext || window.webkitAudioContext;
-    this.audioContext = new audioContext();
-
-    const audioInput = this.audioContext.createMediaStreamSource(stream);
-    this.audioInput = audioInput;
-
-    const volume = this.audioContext.createGain();
-    this.volume = volume;
-    audioInput.connect(volume);
-
-    //创建缓存，用来缓存声音
-    let bufferSize = 2048;
-
-    // 创建声音的缓存节点，createJavaScriptNode方法的
-    // 第二个和第三个参数指的是输入和输出都是双声道。
-    let recorder = this.audioContext.createScriptProcessor(bufferSize, 1, 1);
-    this.recorder = recorder;
-
-    // 录音过程的回调函数，基本上是将左右两声道的声音
-    // 分别放入缓存。
-    recorder.onaudioprocess = (e) => {
-      let buffer = e.inputBuffer.getChannelData(0); //获得缓冲区的输入音频，转换为包含了PCM通道数据的32位浮点数组
-
-      //创建变量并迭代来获取最大的音量值
-      let maxVal = 0;
-      for (let i = 0; i < buffer.length; i++) {
-        if (maxVal < buffer[i]) {
-          maxVal = buffer[i];
-        }
-      }
-
-      //scale用于调整maxVal的精度，乘数用于控制头部的放大比例
-      const scale = 1 + maxVal * 2;
-      const img = this.headRef.current;
-      img.style.transform = "scale(" + scale + ")";
-    };
-    
-    // 将音量节点连上缓存节点，换言之，音量节点是输入
-    // 和输出的中间环节。
-    volume.connect(recorder);
-    recorder.connect(this.audioContext.destination);
-  };
 
   render() {
     return (
         <div className='volumn-center'>
             <div className="volumn-tingTing">
-                <img className="volumn-head" src={ ttHead } ref={ this.headRef }/> 
-                <img className='volumn-body' src={ ttBody } />
+                < img className="volumn-head" src={ ttHead } ref={ this.headRef } alt=''/> 
+                < img className='volumn-body' src={ ttBody } alt=''/>
             </div>
         </div>
     )

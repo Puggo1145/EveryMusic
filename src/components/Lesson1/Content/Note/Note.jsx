@@ -36,24 +36,30 @@ export default class Note extends Component {
 
   handleButtonClick = (index) => {
     if (this.state.interactionEnabled) {
-      this.setState({ currentNoteIndex: index }, () => {
-        this.playAudio(index);
-        setTimeout(() => {
-          this.setState({ currentNoteIndex: null })
-        }, 1000);
+      // 禁用交互
+      this.setState({ interactionEnabled: false }, () => {
+        this.setState({ currentNoteIndex: index }, () => {
+          this.playAudio(index);
+          setTimeout(() => {
+            this.setState({ currentNoteIndex: null });
+  
+            // 1秒后重新启用交互
+            this.setState({ interactionEnabled: true });
+          }, 1000);
+        });
+  
+        // 记录点击次数，全部点击后提示下一页
+        if (!(index in this.state.indexCache)) {
+          this.setState({ indexCache: [...this.state.indexCache, index] });
+        }
+  
+        if (this.state.indexCache.length === 6) {
+          this.setState({ noteClickCount: 0 });
+          PubSub.publish('PROMPT_NEXT');
+        }
       });
-
-      // 记录点击次数，全部点击后提示下一页
-      if ( !(index in this.state.indexCache) ) {
-        this.setState({ indexCache: [...this.state.indexCache, index] });
-      }
-
-      if ( this.state.indexCache.length === 6 ) {
-        this.setState({ noteClickCount: 0 });
-        PubSub.publish('PROMPT_NEXT');
-      }
     }
-  };
+  };  
 
   render() {
     const { heights, currentNoteIndex, notes } = this.state;

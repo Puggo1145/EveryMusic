@@ -94,7 +94,7 @@ export default class PitchGame extends Component {
     let clarityIndex = Math.round(clarity * 100);
 
     // 计算音名
-    if ( this.state.onListen == true) {
+    if ( this.state.onListen === true) {
       this.getNoteName(frequency, clarityIndex);
     }
   }

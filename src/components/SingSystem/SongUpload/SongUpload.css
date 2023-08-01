@@ -1,0 +1,78 @@
+.su {
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 148px;
+    padding: 48px;
+}
+
+.su-top-texts {
+    text-align: center;
+    margin-bottom: 36px;
+}
+.su-top-texts h1 {
+    margin-bottom: 8px;
+}
+.su-top-texts p {
+    font-weight: 800;
+    color: #777777;
+}
+
+.su-upload-btn {
+    cursor: pointer;
+    max-width: 700px;
+    width: 90%;
+    height: 300px;
+    border-radius: 16px;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    transition: all 0.3s ease;
+}
+.su-upload-btn:hover {
+    background-color: #e7e7e7;
+}
+.su-upload-btn p:nth-child(1) {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 110px;
+}
+.su-upload-btn p:nth-child(2) {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.su-upload-models {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    margin: 0 auto;
+}
+.su-upload-models li {
+    width: 350px;
+    height: 100px;
+    border-radius: 16px;
+    padding: 24px;
+    color: #fff;
+} 
+.su-upload-models li:nth-child(1) {
+    background-color: #36cfd1;
+    box-shadow: 0 0 16px #36cfd1;
+}
+.su-upload-models li:nth-child(2) {
+    background-color: #624aff;
+    box-shadow: 0 0 16px #624aff;
+}
+.su-upload-models li:nth-child(3) {
+    background-color: #496ce7;
+    box-shadow: 0 0 16px #496ce7;
+}
+
+.su-upload-uploadMessage {
+    text-align: center;
+    font-weight: 800;
+    margin-top: 24px;
+}

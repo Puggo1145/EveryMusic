@@ -1,9 +1,12 @@
 footer {
+    position: sticky;  
+    bottom: 0;         
     display: flex;
     align-items: center;
-    width: 98%;
+    width: 100%;
     height: 120px;
     border-top: 1px solid #ccc;
+    background-color: #fff;
 }
 .footer-content {
     display: flex;
@@ -12,19 +15,18 @@ footer {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 40px;
 }
 .footer-texts h2 {
     color: #a7a7a7;
     font-size: 24px;
     font-weight: 800;
-    padding-left: 40px;
 }
 .footer-page-routeBtn {
     display: flex;
     justify-content: space-between;
     width: 120px;
     height: 56px;
-    padding-right: 40px;
 }
 .footer-pageBtn {
     cursor: pointer;

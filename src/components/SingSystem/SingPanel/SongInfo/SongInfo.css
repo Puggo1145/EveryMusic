@@ -1,0 +1,23 @@
+.si-title {
+    color: #FFF;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-bottom: 8px;
+}
+.si-author {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 48px;
+}
+
+.si-songcover {
+    width: 248px;
+    height: 248px;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

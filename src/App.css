@@ -1,12 +1,31 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 /* 禁止移动端左右拖动 */
 html{
     touch-action:none;
     touch-action:pan-y;    
 }
+body {
+    overflow-x: hidden;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+:root {
+    --main-color: #fff;
+}
+
 
 @font-face {
     font-family: 'SmileySans';

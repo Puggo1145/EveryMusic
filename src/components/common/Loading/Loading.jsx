@@ -25,8 +25,15 @@ import audio44 from '../../../static/Lesson1/pitchGame/audio/44.mp3';
 import audio45 from '../../../static/Lesson1/pitchGame/audio/45.mp3';
 import audio46 from '../../../static/Lesson1/pitchGame/audio/46.mp3';
 import audio47 from '../../../static/Lesson1/pitchGame/audio/47.mp3';
+import pianoAudio from '../../../static/Lesson1/timbre/audio/piano.mp3';
+import guitarAudio from '../../../static/Lesson1/timbre/audio/guitar.mp3';
+import violinAudio from '../../../static/Lesson1/timbre/audio/violin.mp3';
 
 export default class Loading extends Component {
+
+  state = {
+    loadText: '正在加载，请稍后',
+  }
 
   // 组件挂载完毕后，开始加载资源
   async componentDidMount() {
@@ -64,7 +71,22 @@ export default class Loading extends Component {
       audio45,
       audio46,
       audio47,
+      pianoAudio,
+      guitarAudio,
+      violinAudio,
     ]
+
+    setTimeout(() => {
+      this.setState({
+        loadText: '首次加载时间较长，请耐心等待',
+      })
+    }, 5000)
+
+    setTimeout(() => {
+      this.setState({
+        loadText: '加载太慢？请检查您的网络环境',
+      })
+    }, 30000)
 
     await Promise.all([
       ...audioResources.map((resource) => this.loadAudioFile(resource)),
@@ -84,15 +106,15 @@ export default class Loading extends Component {
   
   // 音频加载器
   async loadAudioFile(src) {
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioContext = new AudioContext();
     const response = await fetch(src);
-    const arrayBuffer = await response.arrayBuffer();
-    const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
-    return audioBuffer;
+    // const arrayBuffer = await response.arrayBuffer();
+    // const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+    return response;
   }
 
   render() {
+    const { loadText } = this.state;
+
     return (
       <div className='loading-center'>
         <div className="loading">
@@ -101,7 +123,7 @@ export default class Loading extends Component {
           <div></div>
           <div></div>
         </div>
-        <p className='loading-text'>正在加载，请稍后</p>
+        <p className='loading-text'>{ loadText }</p>
       </div>
     )
   }

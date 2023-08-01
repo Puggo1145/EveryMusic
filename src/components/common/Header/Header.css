@@ -1,0 +1,36 @@
+.learn-header {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid #e5e5e5;
+    background-color: #fff;
+}
+
+.learn-header-content {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 40px;
+}
+.learn-header-back {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-image: url(../../../static/Learn/back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 1px;
+    background-color: #fff;
+}
+.learn-header-title {
+    margin-left: 20px;
+    font-size: 28px;
+    color: #4b4b4b;
+    vertical-align:top ;
+}

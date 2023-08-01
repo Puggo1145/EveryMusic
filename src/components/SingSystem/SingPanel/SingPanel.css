@@ -1,0 +1,115 @@
+.sp-global-main-color {
+    color: var(--main-color);
+}
+
+.sp {
+    position: relative;
+    max-width: 1400px;
+    width: 90%;
+    height: 100vh;
+    padding: 48px;
+    margin: 0 auto;
+    margin-right: 120px;
+    background-color: var(--main-color);
+}
+
+.sp-back {
+    display: block;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-image: url(../../../static/Learn/back.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 1px;
+}
+
+.sp-wave {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    transform: translateY(100%);
+}
+
+.sp-wave1 {
+    animation: waveAnimation 1s ease infinite alternate; 
+}
+.sp-wave2 {
+    animation: waveAnimation 1s ease infinite alternate 0.5s; 
+}
+
+.sp-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 48px;
+}
+
+.sp-left {
+    margin-right: 48px;
+}
+
+.sp-songInfo-texts {
+    display: flex;
+    flex-direction: column;
+}
+
+.sp-score {
+    z-index: 16;
+    cursor: pointer;
+    width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(140%, -50%);
+    transition: all 0.5s ease;
+}
+.sp-score:hover {
+    transform: translate(120%, -50%);
+}
+.sp-score-opened {
+    z-index: 16;
+    cursor: pointer;
+    width: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    transition: all 0.5s ease;
+}
+
+.sp-endSingBtn {
+    z-index: 15;
+    position: fixed;
+    left: 50%;
+    bottom: 128px;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 60px;
+    color: var(--main-color);
+    font-weight: 800;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+}
+.sp-endSingBtn:hover {
+    box-shadow: 0 0 10px 0 rgb(255, 255, 255);
+}
+
+@keyframes waveAnimation {
+    from {
+        transform: translateY(100%);
+    } to {
+        transform: translateY(0);
+    }
+}

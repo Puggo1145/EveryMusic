@@ -1,0 +1,258 @@
+.pi-wrapper {
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 148px;
+}
+.piano {
+    box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 50rem;
+    height: 32rem;
+    padding: 3rem;
+    background-color: #fefefe;
+    border-bottom: 5.5px solid #d8d8d8;
+    border-radius: 2.395rem;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.2);
+}
+/* top function */
+.topFunc {
+    display: flex;
+    justify-content: space-between;
+    width: 42.8125rem;
+    height: 5.625rem;
+    color: #6d6d6d;
+    /* background-color: #d8d8d8; */
+}
+/* top function left */
+.topFunc-left {
+    width: 10.2rem;
+    height: 100%;
+    /* background-color: #acacac; */
+}
+.topFunc-left h2 {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+}
+.topFunc-left p {
+    margin-top: 0.33rem;
+    line-height: 1rem;
+}
+.toneSwith {
+    display: flex;
+    justify-content: space-between;
+    width: 5rem;
+    height: 0.5px;
+    margin-top: 1.33rem;
+}
+.toneSwith li {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #818181;
+}
+.toneSwith .tone1 {
+    background-color: #0aff81;
+}
+/* top function right */
+.topFunc-right {
+    display: flex;
+    justify-content: space-between;
+    width: 29rem;
+    height: 100%;
+    /* background-color: #818181; */
+}
+.topFunc-right .display {
+    box-sizing: border-box;
+    width: 16rem;
+    height: 100%;
+    border: 0.2rem solid #181818;
+    border-radius: 0.5rem;
+    background-color: #b6c9cf;
+}
+.display h2 {
+    font-size: 24px;
+    text-align: center;
+    line-height: 5.2rem;
+    color: #3e5b85;
+}
+.topFunc-right .volume {
+    width: 6rem;
+    height: 5.5rem;
+    /* background-color: #0aff81; */
+}
+.volume {
+    position: relative;
+}
+.volumeInfo {
+    position: absolute;
+    top: -3rem;
+    left: -0.75rem;
+    width: 7rem;
+    height: 3rem;
+    background-color: #181818;
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.volumeInfo p {
+    color: #fff;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 0.75rem;
+}
+#volumeKnob:active+.volumeInfo{
+    top: -4.5rem;
+    opacity: 100;
+}
+.volume .volumeKnobShadow {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0.4rem;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 2.75rem;
+    border-bottom: 0.2rem solid #d0d0d0;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+}
+.volume #volumeKnob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5.5rem;
+    height: 5.5rem;
+    background-image: url(../../static/PlayInstrument/pic/volume\ knob.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+}
+.volume .points {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 5rem;
+    left: 0;
+    width: 5.5rem;
+    height: 0.5rem;
+}
+.points .startPoint {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #818181;
+}
+.points .endPoint {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: #818181;
+}
+/* bottom function */
+.bottomFunc {
+    display: flex;
+    justify-content: space-between;
+    width: 44rem;
+    height: 17rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+    /* border-radius: 1.5rem; */
+}
+/* left function module octaveSwitch */
+.octaveSwitch {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 3.85rem;
+    height: 100%;
+}
+.octaveSwitch button {
+    width: 3.85rem;
+    height: 50%;
+    border: 0.15rem solid #c5c5c5;
+    background-color: #f0f0f0;
+}
+.octaveSwitch button:active {
+    background-color: #e3e3e3;
+}
+.octaveSwitch #upOct {
+    border-bottom: none;
+    border-radius: 1rem 1rem 0 0;
+}
+.octaveSwitch #downOct {
+    border-radius: 0 0 1rem 1rem;
+}
+.triangleUp {
+    width: 0;
+    height: 0;
+    border: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid #818181;
+    margin: 0 auto;
+}
+.triangleDown {
+    width: 0;
+    height: 0;
+    border: 0.5rem solid transparent;
+    border-top: 0.5rem solid #818181;
+    margin: 0 auto;
+}
+/* right function pianokeys */
+.pianoKeys {
+    position: relative;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 37rem;
+    height: 100%;
+    background-color: #191919;
+    border: 0.15rem solid #191919;
+    border-radius: 1rem;
+}
+.whiteKeys {
+    display: flex;
+    width: 37rem;
+    height: 100%;
+}
+.whiteKeys li {
+    box-sizing: border-box;
+    width: 5.05rem;
+    height: 16.5rem;
+    background-color: #f3f3f3;
+    border-bottom: 0.4rem solid #fff;
+    border-radius: 0.8rem;
+    margin: 0.1rem;
+    box-shadow: 0.48rem 0 1rem rgba(0,0,0,0.2);
+}
+.whiteKeys li:active {
+    background-color: #d7d7d7;
+    border-bottom: none;
+}
+.blackKeys {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 30rem;
+    height: 55%;
+}
+.blackKeys li {
+    width: 2rem;
+    height: 100%;
+    background-color: #181818;
+    margin-left: 3.32rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    border-bottom: 0.3rem solid #3b3b3b;
+    box-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.2);
+}
+.blackKeys li:active {
+    height: 103%;
+    border: none;
+    background-color: #2e2e2e;
+}
+.blackKeys #Cs {
+    margin-left: 0.8rem;
+}
+.blackKeys #Fs {
+    margin-left: 8.4rem;
+}

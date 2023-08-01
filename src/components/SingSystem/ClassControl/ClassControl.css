@@ -1,0 +1,52 @@
+.cctrl-btn {
+    z-index: 100;
+    cursor: pointer;
+    position: absolute;
+    right: 64px;
+    bottom: 64px;
+    width: 64px;
+    height: 64px;
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-image: url(../../../static/ClassControl/btnimg.png);
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.cctrl-btn:hover {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cctrl-panel {
+    z-index: 100;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 142px;
+    bottom: 64px;
+    height: 64px;
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.cctrl-panel-item {
+    cursor: pointer;
+    width: 48px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.cctrl-panel-item:nth-child(1) {
+    background-image: url(../../../static/ClassControl/sit.png);
+}
+.cctrl-panel-item:nth-child(2) {
+    background-image: url(../../../static/ClassControl/quiet.png);
+    background-size: 60%;
+}

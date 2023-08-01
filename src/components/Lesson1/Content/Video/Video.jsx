@@ -28,8 +28,11 @@ export default class Video extends Component {
   // 创建一个ref，用于获取video元素
   videoRef = React.createRef();
 
-  handleVideoClick = () => {
-    let { interactionEnabled, isPlaying } = this.state;
+  handleVideoClick = (event) => {
+    // 阻止冒泡
+    event.stopPropagation();
+
+    let { interactionEnabled } = this.state;
     if (interactionEnabled) {
       const video = this.videoRef.current;
       if (video.paused) {
@@ -50,7 +53,7 @@ export default class Video extends Component {
         <div className='video-television' onClick={this.handleVideoClick}>
           {interactionEnabled && !isPlaying ? (
             <button className='video-playVideo-btn' onClick={this.handleVideoClick}>
-              <div className='video-triangle'></div>
+              <div className='video-triangle' onClick={this.handleVideoClick}></div>
             </button>
           ) : null}
           <video className='video-video' src={videoSrc} ref={this.videoRef}></video>

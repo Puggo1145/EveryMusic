@@ -1,0 +1,78 @@
+.vrt {
+    margin: 0 auto;
+    margin-top: 148px;
+    min-width: 1280px;
+    width: 80%;
+    height: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vrt-left h1 {
+    font-size: 48px;
+    color: #232c34;
+}
+
+.vrt-left p {
+    color: #333;
+    margin-bottom: 150px;
+}
+
+.vrt-startTest {
+    width: 180px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #496ce7;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.vrt-right {
+    width: 600px;
+    height: 500px;
+    padding: 48px;
+    border-radius: 16px;
+    background-color: #efefef;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vrt-right-indicator {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+}
+
+.vrt-right-indicator li {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #cad0e7;
+}
+
+.vrt-right-indicator .current-note {
+    background-color: #496ce7;
+}
+.vrt-right-indicator .current-note::after {
+    /* 在左边创建一个三角形箭头来指向这个note */
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #2c2c2c;
+}
+
+.vrt-right-cue h2 {
+    font-size: 28px;
+}

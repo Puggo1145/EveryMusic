@@ -1,0 +1,68 @@
+.vwu {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1200px;
+    margin: 100px auto;
+    padding-top: 148px;
+}
+
+.vwu-left {
+    height: calc(70vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.vwu-texts {
+    color: #263238;
+    font-style: normal;
+    line-height: normal;
+}
+.vwu-title {
+    font-size: 48px;
+}
+.vwu-description {
+    font-size: 24px;
+}
+.vwu-pitch {
+    font-size: 224px;
+    line-height: 224px;
+}
+.vwu-btn {
+    cursor: pointer;
+    width: 180px;
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    margin-top: 96px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    margin-right: 16px;
+}
+.vwu-start {
+    background-color: #496ce7;
+    border-bottom: 4px solid #7FA6FF;
+}
+.vwu-next {
+    display: inline-block;
+    text-align: center;
+    background-color: #ffd04f;
+    border-bottom: 4px solid #ffc72f;
+    line-height: 56px;
+}
+
+.vwu-pitch-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 600px;
+    height: 400px;
+}
+
+.vwu-pitch-indicator-item {
+    width: 70px;
+    border-radius: 8px;
+    background-color: #496ce7;
+    transition: all 0.3s ease;
+}

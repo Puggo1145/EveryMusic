@@ -1,0 +1,66 @@
+.af {
+    position: relative;
+}
+
+.af-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    width: 500px;
+    height: 500px;
+    border-radius: 250px;
+    transition: all 0.3s ease;
+}
+.af-modeText {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+}
+
+.af-play-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgb(215, 215, 215);
+    animation: playCircle 1.7s ease-out infinite;
+}
+
+@keyframes playCircle {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    } to {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.af-btn {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 0;
+    height: 0;
+    border: 16px solid transparent;
+    border-right: 16px solid #ffffff;
+    transition: all 0.3s ease;
+}
+.af-btn:hover {
+    transform: scale(1.2);
+}
+
+.af-prevFn {
+    left: -64px;
+    transform-origin: 0 90px;
+}
+
+.af-nextFn {
+    right: -64px;
+    border: 16px solid transparent;
+    border-left: 16px solid #fff;
+    transform-origin: 24px 90px;
+}

@@ -1,0 +1,39 @@
+.noteBlock {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.note-indicator {
+    z-index: 10;
+    position: absolute;
+    right: 96px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    box-shadow: 0px 0px 16px 6px var(--main-color);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.note {
+    position: absolute;
+    right: 96px;
+    bottom: 48px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--main-color);
+    border-radius: 12px;
+    transition: bottom 0.2s ease;
+}
+
+.cueTexts {
+   text-align: center;
+}
+
+.pd-judgment {
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+    color: #292929;
+}

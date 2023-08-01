@@ -49,7 +49,7 @@ class Footer extends Component {
       this.props.history.push(routesOrder[currentIndex + 1]);
       PubSub.publish("PAGE_CHANGED", { pageIndex: currentIndex + 1, routesOrder });
     } else {
-      window.location.href = "/learn"; // 回到课程选择页面
+      window.location.href = "/"; // 回到课程选择页面
     }
     if (this.state.promptNextPage) {
       this.setState({ promptNextPage: false });

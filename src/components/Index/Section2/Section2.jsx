@@ -15,7 +15,7 @@ export default class Section2 extends Component {
                     学生可以用唱歌、打节拍等各种形式与课程进行互动<br />
                     帮助学生更好地理解音乐知识，提高学习的趣味性
                 </p>
-                <a className='section2-knowMore' href="#">了解更多</a>
+                {/* <a className='section2-knowMore' href="#">了解更多</a> */}
             </div>
         </div>
       </div>

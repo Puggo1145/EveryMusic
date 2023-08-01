@@ -1,0 +1,78 @@
+.ssl {
+    margin-right: calc(100% - 100vw);
+}
+.ssl-wrapper {
+    margin: 148px auto;
+    margin-bottom: 48px;
+    max-width: 1200px;
+}
+.ssl-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #263238;
+}
+.ssl-description {
+    font-size: 16px;
+    font-weight: 700;
+    color: #CACACA;
+    margin-bottom: 32px;
+}
+
+.ssl-contentList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 28px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.ssl-contentList-item-link {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 225px;
+    border-radius: 18px;
+    background-image: url(../../../static/SingSystem/songSelection/lock.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease-in-out;
+}
+.ssl-contentList-item-link:hover {
+    box-shadow: 0px 0px 36px -12px rgba(0, 0, 0, 0.2);
+}
+.ssl-contentList-item-texts {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #fff;
+    padding: 16px;
+}
+.ssl-contentList-item-link-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #263238;
+}
+.ssl-contentList-item-link-description {
+    font-size: 14px;
+    color: #CACACA;
+    font-weight: 800;
+}
+
+.ss-uploadSong {
+    display: block;
+    width: 100%;
+    height: 60px;
+    border-radius: 16px;
+    background-color: #e3e3e3;
+    text-align: center;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+.ss-uploadSong:hover {
+    background-color: #cacaca;
+}
