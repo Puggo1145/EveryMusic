@@ -70,7 +70,7 @@ export default function SongSelection(props) {
                             })
                         }
                     </ul>
-                    <Link className='ss-uploadSong' to='/singsystem/songupload'>上传歌曲</Link>
+                    {/* <Link className='ss-uploadSong' to='/singsystem/songupload'>上传歌曲</Link> */}
                 </div>
             </div>
         </Fragment>

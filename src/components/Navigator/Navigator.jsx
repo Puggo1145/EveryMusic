@@ -35,9 +35,15 @@ export default function Navigator() {
     <div className='ng'>
       <Header title={"模式选择"} />
       <h1 className='ng-description'>选择您的学习方式</h1>
-      <p style={{ textAlign: 'center', color: '#333' }}>{!isLoginToken && '登陆以使用完整功能!'}</p>
+      {/* <p style={{ textAlign: 'center', color: '#333' }}>{!isLoginToken && '登陆以使用完整功能!'}</p> */}
       <div className='ng-content'>
-        {isLoginToken ? (
+        <Link className='ng-content-item' to="/singsystem/songselection">
+          <h2 className='ng-content-item-title'>学唱歌</h2>
+          <p className='ng-content-item-description'>和人人音乐家一起，唱你喜欢的歌曲</p>
+          <div className='ng-content-item-levelmark' style={{ color: "#496CE7" }}>唱歌教学</div>
+          <img className='ng-content-item-img' src={goWithClassImg} alt="" />
+        </Link>
+        {/* {isLoginToken ? (
           <Link className='ng-content-item' to="/singsystem/songselection">
             <h2 className='ng-content-item-title'>学唱歌</h2>
             <p className='ng-content-item-description'>和人人音乐家一起，唱你喜欢的歌曲</p>
@@ -51,7 +57,7 @@ export default function Navigator() {
             <div className='ng-content-item-levelmark' style={{ color: "#496CE7" }}>唱歌教学</div>
             <img className='ng-content-item-img' src={goWithClassImg} alt="" />
           </div>
-        )}
+        )} */}
         <Link className='ng-content-item' to="/learn">
           <h2 className='ng-content-item-title'>互动课程</h2>
           <p className='ng-content-item-description'>在互动中学习音乐</p>
