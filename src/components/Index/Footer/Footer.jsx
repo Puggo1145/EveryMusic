@@ -13,9 +13,6 @@ export default class Footer extends Component {
             <div className='footer-logo'>
                 <img src={footerLogo} alt='resource-lost'/>
             </div>
-            <div className='footer-logo-contact'>
-                <span>加入我们：puggoo1145@gmail.com</span>
-            </div>
         </div>
       </div>
     )

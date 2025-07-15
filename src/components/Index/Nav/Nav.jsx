@@ -78,7 +78,7 @@ export default class Nav extends Component {
         <div className='nav-center'>
           <a className='nav-logo-link' href="/">
             <img className='nav-logo' src={navLogo} alt='resource-lost' />
-            <h1 className='nav-title'>人人音乐家 Beta</h1>
+            <h1 className='nav-title'>人人音乐家</h1>
           </a>
           <ul className='nav-link'>
             <li className='nav-link-course'><Link className='nav-link-aLink' to="/learn">课程</Link></li>

@@ -10,7 +10,6 @@ import UserCenter from './components/UserCenter/UserCenter'
 import Navigator from './components/Navigator/Navigator'
 import SingSystem from './components/SingSystem/SingSystem'
 import PlayInstrument from './components/PlayInstrument/PlayInstrument'
-import AboutUs from './components/AboutUs/AboutUs'
 
 import './App.css'
 
@@ -26,7 +25,6 @@ export default function App() {
       <Route path="/singsystem" component={SingSystem} />
       <Route path="/playinstrument" component={PlayInstrument} /> 
       <Route path="/usercenter" component={UserCenter} />
-      <Route path="/aboutus" component={AboutUs} />
     </Switch>
   )
 }

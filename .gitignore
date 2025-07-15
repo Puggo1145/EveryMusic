@@ -1,4 +1,3 @@
-/node_modules
-/srcBackUp
-/build
-/build.zip
+node_modules
+srcBackUp
+build
